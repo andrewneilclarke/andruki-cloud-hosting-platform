@@ -60,6 +60,8 @@ img {
 }   
 .navbar .container .logo {
     font-size: 3em;
+    position: relative;
+    right: 0.4em;
 }
 
 /* Showcase */
@@ -83,8 +85,9 @@ img {
 .showcase-form {
     position: relative;
     top: 3em;
-    height: 48vh;
+    height: 60vh;
     width: 30vw;
+    min-width: 25vw;
     /* padding: 4em; */
     z-index: 1;
     justify-self: flex-end;
