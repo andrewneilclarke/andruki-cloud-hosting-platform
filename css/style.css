@@ -50,7 +50,7 @@ code, pre {
 .navbar {
     background-color: var(--primary-color);
     color: white;
-    height: 8vh;
+    height: 60px;
 
 }
 .navbar ul {
@@ -97,7 +97,7 @@ code, pre {
 .showcase-form {
     position: relative;
     top: 3em;
-    height: 45vh;
+    height: 440px;
     width: 30vw;
     min-width: 25vw;
     /* padding: 4em; */
