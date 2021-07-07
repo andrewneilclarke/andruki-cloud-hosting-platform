@@ -47,6 +47,10 @@
     background-color: var(--light-color);
     color: white;
 }
+
+.bg-dark a {
+    color: white;
+}
 /* Text colors */
 .text-primary {
     color: var(--primary-color);
@@ -85,10 +89,29 @@
     font-size: 4rem;
   }
 
-  
+
 
 .text-center {
     text-align: center;
+}
+/* Alert */
+.alert {
+  background-color: var(--light-color);
+  padding: 1em 2em;
+  font-weight: bold;
+  margin: 1.5em 0;
+}
+.alert i {
+  margin-right: 0.8em;
+}
+
+.alert-success {
+  background-color: var(--success-color);
+  color: white;
+}
+.alert-error {
+  background-color: var(--error-color);
+  color: white;
 }
 .flex {
     display: flex;

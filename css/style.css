@@ -5,6 +5,8 @@
     --secondary-color: #19647E;
     --dark-color: #1F2041;
     --light-color: #FFE4AD;
+    --success-color: rgb(105, 207, 105);
+    --error-color: rgb(250, 123, 123);
 }
 
 * {
@@ -37,6 +39,12 @@ p {
 }
 img {
     width: 100%;
+}
+
+code, pre {
+    background-color: darkslategray;
+    color: white;
+    padding: 0.6em;
 }
 /* Nav */
 .navbar {
@@ -174,4 +182,122 @@ img {
   
   .languages .card:hover {
     transform: translateY(-1.5em);
+  }
+
+  /* Features */
+  .features-head img {
+      width: 15vw;
+      justify-self: flex-end;
+  } 
+  .features-sub-head img {
+    width: 22vw;
+    justify-self: flex-end;
+  }
+.features-main .card > i {
+    margin-right: 0.5em; 
+}
+
+.features-main .grid {
+    padding: 0.2em;
+}
+
+.features-main .grid > *:first-child {
+    /* width: 80%; */
+    /* height: auto; */
+    grid-column: 1 / span 3;
+}
+.features-main .grid > *:nth-child(2) {
+    /* width: 80%; */
+    /* height: auto; */
+    grid-column: 1 / span 2;
+}
+  /* Footer */
+.footer .social a {
+    margin: 0 10px;
+  }
+
+
+/* Docs */
+.docs-head img {
+    width: 15vw;
+    justify-self: flex-end;
+}
+.docs-main h3 {
+    margin: 1.5em 0;
+}
+.docs-main .grid {
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+}
+
+.docs-main nav li {
+    font-size: 1em;
+    padding-bottom: 0.7em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid #CCC;
+
+}
+.docs-main a:hover {
+    font-weight: bolder;
+} 
+
+  /* Tablets and under */
+  @media(max-width: 768px) {
+    .grid,
+    .showcase .grid,
+    .stats .grid,
+    .cli .grid,
+    .cloud .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    }
+    
+    .showcase {
+        height: auto;
+    }
+    .showcase-text {
+        text-align: center;
+        margin-top: 3em;
+    }
+    .showcase-form {
+        justify-self: center;
+        margin: auto;
+        margin-bottom: 2em;
+        width: 23em;
+    }
+    .cli .grid > *:first-child {
+        height: auto;
+        grid-column: 1;
+        grid-row: 1;
+      }
+      .cli .grid img {
+        height: 25em;
+        width: 25em;
+      }
+      .footer {
+        text-align: center;
+      }
+  }
+
+  /* Mobile */
+  @media(max-width: 500px) {
+      .navbar {
+          height: 12vh;
+      }
+      .navbar .flex {
+          flex-direction: column;
+      }
+      .navbar .container .logo {
+        position: static;
+    }
+    .navbar ul {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+    .showcase-form {
+        justify-self: center;
+        margin: auto;
+        margin-bottom: 2em;
+        width: 23em;
+        height: auto;
+    }
   }
