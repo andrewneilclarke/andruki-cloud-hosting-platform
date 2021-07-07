@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
 
 :root {
-    --primary-color: #0353A4;
-    --secondary-color: #33415C;
-    --dark-color: #001233;
-    --light-color: #C3E0FE;
+    --primary-color: #52B69A;
+    --secondary-color: #76C893;
+    --dark-color: #0A2133;
+    --light-color: #C9EDF8;
     --success-color: rgb(5, 5, 5);
     --error-color: rgb(250, 123, 123);
 }
