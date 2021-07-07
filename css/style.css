@@ -347,12 +347,10 @@ code, pre {
   }
 
 
-
-
   /* Mobile */
   @media(max-width: 500px) {
       .navbar {
-          height: 12vh;
+          height: 18vh;
       }
       .navbar .flex {
           flex-direction: column;
