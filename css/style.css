@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
 
 :root {
-    --primary-color: #119DA4;
-    --secondary-color: #19647E;
-    --dark-color: #1F2041;
-    --light-color: #FFE4AD;
-    --success-color: rgb(105, 207, 105);
+    --primary-color: #0353A4;
+    --secondary-color: #33415C;
+    --dark-color: #001233;
+    --light-color: #C3E0FE;
+    --success-color: rgb(5, 5, 5);
     --error-color: rgb(250, 123, 123);
 }
 
@@ -51,6 +51,7 @@ code, pre {
     background-color: var(--primary-color);
     color: white;
     height: 8vh;
+
 }
 .navbar ul {
     display: flex;
@@ -67,9 +68,9 @@ code, pre {
     justify-content: space-between;
 }   
 .navbar .container .logo {
-    font-size: 3em;
-    position: relative;
-    right: 0.4em;
+    font-size: 4.5em;
+    /* position: relative;
+    right: 0.4em; */
 }
 
 /* Showcase */
@@ -90,15 +91,19 @@ code, pre {
     grid-template-columns: 45% 55%;
     gap: 3em;
 }
+.showcase-text {
+    animation: slideInFromLeft 1s ease-in; 
+}
 .showcase-form {
     position: relative;
     top: 3em;
-    height: 60vh;
+    height: 45vh;
     width: 30vw;
     min-width: 25vw;
     /* padding: 4em; */
     z-index: 1;
     justify-self: flex-end;
+    animation: slideInFromRight 1s ease-in; 
 } 
 .showcase-form .form-control {
     margin: 3em 0;
@@ -119,8 +124,8 @@ code, pre {
 .showcase::after {
     content: '';
     position: absolute;
-    height: 10em;
-    bottom: -2.5em;
+    height: 7em;
+    bottom: -3.1em;
     right: 0;
     left: 0;
     background: white;
@@ -132,6 +137,7 @@ code, pre {
 /* Stats */
 .stats {
     padding-top: 4em;
+    animation: slideInFromBottom 1s ease-in; 
 }
 
 .stats-heading {
@@ -172,7 +178,7 @@ code, pre {
   .languages .card {
     text-align: center;
     margin: 2em 0.6em 3em;
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.3s ease-in-out;
   }
   
   .languages .card h4 {
@@ -186,12 +192,15 @@ code, pre {
 
   /* Features */
   .features-head img {
-      width: 15vw;
+      width: 200px;
       justify-self: flex-end;
   } 
   .features-sub-head img {
-    width: 22vw;
+    width: 200px;
     justify-self: flex-end;
+  }
+  .features-sub-head .grid {
+    color:var(--dark-color);
   }
 .features-main .card > i {
     margin-right: 0.5em; 
@@ -219,11 +228,12 @@ code, pre {
 
 /* Docs */
 .docs-head img {
-    width: 15vw;
+    width: 200px;
     justify-self: flex-end;
 }
 .docs-main h3 {
     margin: 1.5em 0;
+    color: var(--primary-color);
 }
 .docs-main .grid {
     grid-template-columns: 1fr 2fr;
@@ -241,13 +251,56 @@ code, pre {
     font-weight: bolder;
 } 
 
+/* Animations */
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromBottom {
+    0% {
+      transform: translateY(100%);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+
   /* Tablets and under */
   @media(max-width: 768px) {
     .grid,
     .showcase .grid,
     .stats .grid,
     .cli .grid,
-    .cloud .grid {
+    .cloud .grid,
+    .features-main .grid,
+    .docs-main .grid {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     }
@@ -277,7 +330,24 @@ code, pre {
       .footer {
         text-align: center;
       }
+      .features-head,
+      .features-sub-head,
+      .docs-head {
+          text-align: center;
+      }
+      .features-head img,
+      .features-sub-head img,
+      .docs-head img {
+          justify-self: center;
+      }
+      .features-main .grid > *:first-child,
+      .features-main .grid > *:nth-child(2) {
+          grid-column: 1;
+      }
   }
+
+
+
 
   /* Mobile */
   @media(max-width: 500px) {
